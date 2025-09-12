@@ -1,0 +1,58 @@
+:root { --brand:#2563eb; }
+
+.btn-brand { background:var(--brand); color:#fff; }
+.btn-brand:hover { background:#1d4ed8; color:#fff; }
+
+.hero { background: radial-gradient(80% 60% at 50% 10%, #eff6ff 0%, #ffffff 60%); }
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+/* Floating Contact Dock (desktop) */
+.contact-dock {
+  position: fixed;
+  right: 18px;
+  top: 120px;
+  z-index: 1030;
+  display: none;
+}
+@media (min-width: 992px){
+  .contact-dock { display: flex; flex-direction: column; gap: 10px; }
+}
+.contact-dock a {
+  width: 48px; height: 48px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  background: #ffffff; border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 18px rgba(0,0,0,.07);
+  transition: transform .15s ease;
+}
+.contact-dock a:hover { transform: translateY(-2px); }
+
+/* Floating Contact Button (mobile) */
+.contact-fab { position: fixed; right: 16px; bottom: 16px; z-index: 1030; }
+
+/* Footer icons centered and styled */
+.footer-icon {
+  font-size: 1.2rem;
+  color: #6b7280; /* muted */
+}
+.footer-icon:hover {
+  color: var(--brand);
+}
+
+/* Tighter text on small screens */
+@media (max-width: 576px){
+  .lead { font-size: 1rem; }
+}
+
+.project-card { cursor: pointer; transition: transform .15s ease, box-shadow .15s ease; }
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.project-nav a { text-decoration: none; }
+.project-nav .card { transition: transform .12s ease; }
+.project-nav .card:hover { transform: translateY(-2px); }
